@@ -1,10 +1,12 @@
 import React from "react";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="b-footer" id="footer-id">
-      <div className="b-footer-logo">Barbie Codes</div>
-      <p>© 2025 Barbie Coding — Built with 💖 and JavaScript</p>
+    <Logo/>
+
+      <p>© 2025 Barbie Coding by Rosnin</p>
     </footer>
   );
 }

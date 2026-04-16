@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import barbieImg from '../assets/barbie-editor.png'
 
-export default function StartCoding() {
+export default function Editor() {
   const [code, setCode] = useState(`
 <h1>Hello Barbie Coder 💖</h1>
 <p>Start building your dreams here!</p>
@@ -11,7 +11,7 @@ const [output, setOutput] = useState("");
   const [error, setError] = useState("");
 
  const runCode = () => {
-  // Remove self-closing tags first
+
   const cleanedCode = code.replace(/<br\s*\/?>|<img[^>]*>|<input[^>]*>/gi, "");
 
   const openTags = (cleanedCode.match(/<([a-z]+)(?![^>]*\/>)[^>]*>/gi) || []).length;

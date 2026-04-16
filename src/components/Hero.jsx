@@ -22,8 +22,8 @@ export default function Hero() {
               A playful, welcoming space where girls can learn coding without feeling intimidated or excluded.
             </p>
             <div className="hero-btns">
-              <button className="btn-pink" onClick={() => navigate("/editor")}>Start Coding ✦</button>
-              <button className="btn-outline">View Projects</button>
+              <button className="b-btn btn-shimmer" onClick={() => navigate("/editor")}>Start Coding ✦</button>
+              <button className="b-btn btn-shimmer btn-view">View Lessons</button>
             </div>
           </div>
         </div>

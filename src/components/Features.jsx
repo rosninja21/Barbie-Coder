@@ -9,18 +9,15 @@ export default function Features() {
       </div>
       <div className="cards">
         <div className="card">
-          <div className="card-icon icon-pink">🎀</div>
-          <h3>Styled Tutorials</h3>
+          <h3>HTML</h3>
           <p>Learn HTML, CSS, and JavaScript through beautiful, pink-themed lessons designed for everyone.</p>
         </div>
         <div className="card">
-          <div className="card-icon icon-cyan">💻</div>
-          <h3>Live Projects</h3>
+          <h3>CSS</h3>
           <p>Build real apps from scratch — portfolios, fashion trackers, and more glam projects.</p>
         </div>
         <div className="card">
-          <div className="card-icon icon-purple">✨</div>
-          <h3>Barbie Community</h3>
+          <h3>JAVASCRIPT</h3>
           <p>Connect with other fabulous coders, share your work, and grow together as a community.</p>
         </div>
       </div>

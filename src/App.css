@@ -22,6 +22,40 @@ h1 {
   font-family: 'Leckerli One', cursive;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Mono:wght@700&display=swap');
+
+.b-logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2rem;
+  color: white;
+  letter-spacing: -1px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.15em;
+  text-shadow:
+    3px 3px 0px #FF69B4,
+    5px 5px 0px rgba(233, 30, 140, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.b-logo span {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #E91E8C;
+  padding: 0.18em 0.55em 0.22em;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0px #b5146e;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.b-logo span:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #b5146e;
+}
+
+
 .nav {
   position: fixed;
   top: 0;
@@ -60,6 +94,11 @@ h1 {
 .navlinks li a:hover{
   color: #FFE066;
   
+}
+
+.navlinks a.active {
+  color: #FFE066;
+  font-weight: 600;
 }
 
 .b-search{
@@ -142,8 +181,8 @@ h1 {
   color:  #FFE066;
 }
 
-.btn-pink {
-  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  /* border: 2px solid rgba(255, 255, 255, 0.5);
   background-color: #FFE066;
    color: #6a0dad;
   padding: 10px 24px;
@@ -151,20 +190,51 @@ h1 {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s; */
+.b-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+  
+
+.btn-shimmer{
+  background: #FFE066;
+  color: indigo;
+  box-shadow: 0 6px 0 #b5146e;
 }
 
-.btn-pink:hover {
-  background-color: palevioletred;
-  box-shadow: 4px 4px 14px rgba(106, 13, 173, 0.5);
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
 }
 
-.btn-outline {
+.btn-shimmer:hover::after { left: 130%; }
+.btn-shimmer:hover  { transform: translateY(-3px); box-shadow: 0 9px 0 #b5146e; }
+.btn-shimmer:active { transform: translateY(3px);  box-shadow: 0 2px 0 #b5146e; }
+
+
+.btn-view {
   border: 2px solid rgba(255, 255, 255, 0.6);
   background: transparent;
   color: white;
   padding: 10px 24px;
-  border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -227,6 +297,29 @@ h1 {
   opacity: 0.88;
 }
 
+.about{
+  display: flex;
+  background-color: #ff69b4;
+  padding-bottom: 100px;
+
+
+}
+
+.about-h2{
+  text-align: center;
+  
+}
+
+.about-content-left{
+
+  padding: 60px 150px;
+  text-align: justify;
+
+}
+
+.about-content-right{
+
+}
 
 
 
@@ -318,6 +411,152 @@ h1 {
 }
 
 
+.b-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  padding: 1.5rem;
+}
+
+.b-stats > div {
+  background: #fff0f7;
+  border: 2px solid #E91E8C;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: transform 0.18s ease;
+}
+
+.b-stats > div:hover { transform: translateY(-4px); }
+
+/* accent the 2nd & 3rd cards with purple/coral */
+.b-stats > div:nth-child(2) { background: #fdf0ff; border-color: #b266d9; }
+.b-stats > div:nth-child(3) { background: #fff5f0; border-color: #ff6b6b; }
+
+.stat-num {
+  display: block;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #E91E8C;
+  text-shadow: 2px 2px 0 #ffb3d9;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #993556;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-section {
+  background: #ff4da6;
+  color: white;
+  padding: 80px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-section .max-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  text-align: center;
+  color: #cfcfcf;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  background: #160d2e;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #ff9ad5;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1e1040;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 0 2px #ff4da6;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff4da6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ff2f92;
+}
+
+.b-footer, .b-stats{
+  background: linear-gradient(#AB35B0, rgb(171, 53, 176));
+  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
+
+.b-footer {
+  background: #7A1A6B;
+  border-top: 3px solid #E91E8C;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.b-footer p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: #cc6699;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
 
 
 
