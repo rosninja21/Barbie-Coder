@@ -31,7 +31,7 @@ export default function Nav() {
 
 
 
-        <li><a href="#" className={active === "Learn" ? "active" : ""}>Learn</a></li>
+        <li><a href="#learn-id" className={active === "Learn" ? "active" : ""}  onClick={() => setActive ("About")} >Learn</a></li>
 
 
          <li><a href="#" className={active=== "Resources" ? "active" : ""}>Resources</a></li>
