@@ -451,81 +451,127 @@ h1 {
   letter-spacing: 0.08em;
 }
 
-.contact-section {
-  background: #ff4da6;
-  color: white;
-  padding: 80px 20px;
-  font-family: Arial, sans-serif;
+/* LEARN */
+
+.learn-page {
+  background: var(--gradient);
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
-.contact-section .max-width {
-  max-width: 800px;
-  margin: 0 auto;
+/* Nav */
+.language-name {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.contact-section h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.contact-section p {
-  text-align: center;
-  color: #cfcfcf;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  background: #160d2e;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  color: #ff9ad5;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
+.language-btn {
+  padding: 10px;
   border-radius: 10px;
-  border: none;
-  background: #1e1040;
+  background-color: palevioletred;
+  border: 1px solid white;
   color: white;
-  outline: none;
-  transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 0 2px #ff4da6;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  background: #ff4da6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
+  box-shadow: 4px 4px 14px rgba(106, 13, 173, 0.5);
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
-.contact-form button:hover {
-  background: #ff2f92;
+.language-btn.active {
+  background-color: white;
+  color: palevioletred;
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Section */
+.section-content {
+  padding: 2rem 1.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: #d5006d;
+  margin-bottom: 1.2rem;
+}
+
+/* Topic Cards */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.topic-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  border: 2px solid #ffd6e8;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.topic-card:hover {
+  border-color: #ff5fa0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 95, 160, 0.15);
+}
+
+.topic-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.topic-name {
+  font-size: 1rem;
+  color: #c2185b;
+  margin-bottom: 4px;
+}
+
+.topic-desc {
+  font-size: 0.78rem;
+  color: #b06080;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+.badge-beginner {
+  background: #fce4ec;
+  color: #880e4f;
+}
+
+.badge-intermediate {
+  background: #fff3e0;
+  color: #7c4b00;
+}
+
+.badge-advanced {
+  background: #f3e5f5;
+  color: #4a148c;
+}
+
+
 
 .b-footer, .b-stats{
   background: linear-gradient(#AB35B0, rgb(171, 53, 176));

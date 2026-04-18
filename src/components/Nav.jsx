@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
 
@@ -28,10 +29,15 @@ export default function Nav() {
           >About</a></li>
 
 
-
-
-
-        <li><a href="#learn-id" className={active === "Learn" ? "active" : ""}  onClick={() => setActive ("About")} >Learn</a></li>
+        <li>
+  <Link 
+    to="/learn"
+    className={active === "Learn" ? "active" : ""}
+    onClick={() => setActive("Learn")}
+  >
+    Learn
+  </Link>
+</li>
 
 
          <li><a href="#" className={active=== "Resources" ? "active" : ""}>Resources</a></li>

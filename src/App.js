@@ -5,6 +5,8 @@ import About from "./components/About";
 import Stats from "./components/Stats";
 import Footer from "./components/Footer";
 import Editor from "./components/Editor";
+import Learn from "./components/Learn";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -27,6 +29,7 @@ function App() {
         } />
 
         <Route path="/editor" element={<Editor />} />
+        <Route path="/learn"  element={<Learn />}  />
 
       </Routes>
     </BrowserRouter>
